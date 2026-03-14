@@ -6,6 +6,11 @@ from fastapi.responses import FileResponse
 import uuid
 from morphing import count_morphed_usages
 
+
+folders = ["uploads", "send-file"]
+for folder in folders:
+    os.makedirs(folder, exist_ok=True)
+
 responses = []
 
 app = FastAPI()
